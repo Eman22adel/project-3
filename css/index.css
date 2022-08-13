@@ -1,0 +1,362 @@
+/*======== google font ========*/
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,700&family=Rubik+Moonrocks&family=Work+Sans:ital,wght@0,300;0,500;0,600;0,900;1,200&display=swap');
+
+
+/*==========  reset  ==========*/
+* {
+    margin: 0;
+    text-transform: capitalize;
+}
+
+body {
+    font-family: 'PT Sans', sans-serif;
+}
+
+/*==========  Genral ==========*/
+:root {
+    --maincolor: #7B5244;
+    --light-main-color:#F0E9E7;
+    --secondarycolor: #69BED0;
+}
+
+/*========= general class  =========*/
+
+header .btn, .card .btn {
+    background-color: var(--secondarycolor);
+    color: white;
+}
+.__title{
+    text-align: center;
+    padding: 1rem 0;
+    margin: 1rem auto;
+}
+.__title h2{
+    position: relative;
+    display: inline-block;
+}
+.__title h2::after{
+    content: "";
+    width: 50%;
+    height: 5%;
+    background-color: #d15353;
+    position: absolute;
+    top: 160%;
+    right: 24%;
+}
+
+/*==========  Genral ==========*/
+
+li {
+    list-style: none;
+}
+
+i {
+    font-size: 24px;
+}
+
+a {
+    color: black;
+    padding-right: 1rem;
+    font-weight: bold;
+    padding: 1rem;
+}
+
+
+/*==========  nav ==========*/
+
+
+/*========  nav hover start =======*/
+.navbar-nav .nav-link {
+    position: relative;
+}
+.navbar-nav i{
+    color: var(--maincolor);
+}
+.navbar-nav .nav-link::before,
+.navbar-nav .nav-link::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-color: var(--maincolor);
+    border-style: solid;
+    width: 100%;
+    height: 100%;
+    border-radius: 20%
+}
+
+.navbar-nav .nav-link::before {
+    border-width: 0 2px;
+    transform: scale3d(1, 0, 1);
+    transition: transform 0.2s;
+}
+
+.navbar-nav .nav-link::after {
+    border-width: 2px 0;
+    transform: scale3d(0, 1, 1);
+    transition: transform 0.2s;
+}
+
+.navbar-nav .nav-link:hover::before,
+.navbar-nav .nav-link:hover::after {
+    transform: scale3d(1, 1, 1);
+}
+
+/*========  nav hover end =======*/
+
+/*========= start nav__drop down  ========*/
+
+.nav__dropdown {
+    position: relative;
+}
+
+.nav__dropdown__items{
+    position: absolute;
+    font-weight: lighter;
+    background-color: #eed9d1;
+    top: 150%;
+    left:center;
+    visibility: hidden;
+    transform: scale(0);
+    transition: transform 1s;
+    display: flex;
+    z-index: 1000;
+}
+.nav__dropdown__items ul{
+    background-color: #eed9d1;
+}
+.nav__dropdown:hover .nav__dropdown__items {
+    visibility: visible;
+    transform: scale(1);
+}
+
+/*======= end nav__drop down ======*/
+.navbar-collapse {
+    flex-grow: 1;
+    align-items: center;
+    justify-content: space-around;
+}
+
+/**************************** end nav ********************************/
+
+/*==========  Header  ==========*/
+
+header {
+    /* height:fit-content; */
+    background-color: #f0e9e7;
+}
+
+.header__img #header__slide__img {
+    width: 100%;
+}
+
+.header__title h1 {
+    color: var(--maincolor);
+    font-weight: bolder;
+    font-size: 2.2rem;
+}
+
+/**************************** end header********************************/
+
+/*========== category =========*/
+.category{
+    position: relative;
+}
+.category__back,
+.category__next{
+    position: absolute;
+    top: 40%;
+    z-index: 10000;
+}
+.category__back{
+    right: 96%;
+}
+.category__next{
+    left: 96%;
+}
+.category__product{
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: hidden;
+}
+.category__product__item :hover{
+    transform: scale(1.02);
+}
+/**************************** end category********************************/
+
+/**************************** start discount********************************/
+
+.carousel-item{
+    background-color: var(--light-main-color);
+    padding: 2.8rem;
+}
+.carousel-item i{
+    font-size: 5rem;
+    padding-right: 1rem;
+}
+.carousel-indicators .btn{
+    height: 15px;
+    width: 15px;
+}
+.discount__item:nth-child(2) div,
+.discount__item:nth-child(3) div{
+    z-index: 1000;
+}
+.discount__item:nth-child(2):hover img,
+.discount__item:nth-child(3):hover img{
+    transform: scale(1.05);
+}
+/**************************** end discount********************************/
+
+/**************************** start service********************************/
+
+
+.service{
+    border-bottom: 2px solid #ece7e7;
+}
+.service__item p{
+    color: #777777;
+}
+.service__item div{
+    height: 50px;
+    background-repeat: no-repeat;
+}
+.service__logo_1{
+    background-image: url(../images/service/service-icon1.png);
+    background-position: 50% -87px;
+}
+.service__logo_2{
+    background-image: url(../images/service/service-icon2.png);
+    background-position: 50% -105px;
+}
+.service__logo_3{
+    background-image: url(../images/service/service-icon3.png);
+    background-position: 50% -96px;
+}
+.service__logo_4{
+    background-image: url(../images/service/service-icon4.png);
+    background-position: 50% -100px;
+}
+.service__logo_5{
+    background-image: url(../images/service/service-icon5.png);
+    background-position: 50% -87px;
+}
+/********** hover of service icon *********/
+.service__item:nth-child(1):hover div{
+    background-position: 50% 0px;
+}
+.service__item:nth-child(2):hover div {
+    background-position: 50% -15px;
+}
+.service__item:nth-child(3):hover div {
+    background-position: 50% -11px;
+}
+.service__item:nth-child(4):hover div {
+    background-position: 50% -11px;
+}
+.service__item:nth-child(5):hover div {
+    background-position: 50% 0px;
+}
+
+/**************************** end service********************************/
+
+/**************************** start featured ********************************/
+
+.featured__img__hover{
+    position: absolute;
+    height: 0%;
+    top:0;
+    text-align: center;
+    width: 100%;
+    background-color: rgba(1,1,1,0.5);
+    z-index: 1000;
+    visibility: hidden;
+    transition: all 0.5s linear; 
+}
+
+.featured__img__hover i{
+    transition-delay: 0.45s;
+}
+.featured--img--icon{
+    padding-top: 50%;
+}
+.swap{
+    position: absolute;
+    height: fit-content;
+    top: 0;
+    left: 0;
+    transform: scaleX(0);
+}
+.featured_item:hover .swap,
+.featured_item:hover .featured__img__hover{
+    transform: scaleX(1);
+    visibility: visible;
+    height: 87%;
+}
+/**************************** end featured ********************************/
+
+
+
+/*========= start necessitatibuse ========*/
+.necessitatibuse__item:nth-child(1) div{
+    top: calc(90%/2);
+    left: calc(90%/2);
+    width: 100%;
+}
+
+.necessitatibuse__item .carousel-indicators .btn{
+    background-color: var(--maincolor);
+}
+
+/*========= end necessitatibuse ========*/
+
+
+/*========= start mark ========*/
+
+.mark__sec div{
+    padding: 1rem;
+    height: fit-content;
+    width: fit-content;
+    border-top: #69BED0 5px solid;
+    border-bottom: #7B5244 5px solid;
+    border-radius: 50%;
+}
+.mark__sec div img{
+    object-fit: contain;
+}
+/*========= start mark ========*/
+
+
+/*========= start footer ========*/
+
+footer{
+    color:#686161;
+}
+footer ul li{
+    margin-top: 0.5rem;
+}
+footer .footer__subscribe input{
+    background-color: transparent;
+    outline: none;
+    border: none;
+    border-bottom: #777777 2px solid;
+}
+/*========= end footer ========*/
+
+
+
+/*======== media query =======*/
+@media screen and (max-width: 900px) {
+    /*button slider */
+    .category__back {
+        right: 86%;
+    }
+    .category__next {
+        left: 85%;
+    }
+}
+@media screen and (min-width: 1000px) {
+    .necessitatibuse__item:nth-child(2) .carousel-item  p{
+        padding-bottom:5rem ;
+    }
+}
